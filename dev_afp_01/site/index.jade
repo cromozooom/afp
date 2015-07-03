@@ -3,19 +3,16 @@
 
 doctype html
 html(lang="en")
-	head
-		title #{title}
-		meta(charset="utf-8")
-		meta(http-equiv="X-UA-Compatible" content="IE=edge")
-		meta(name="viewport" content="width=device-width, initial-scale=1")
+	block head
+		head
+			title #{title}
+			meta(charset="utf-8")
+			meta(http-equiv="X-UA-Compatible" content="IE=edge")
+			meta(name="viewport" content="width=device-width, initial-scale=1")
 
-		link(href="#{assets}css/style.css", rel="stylesheet")
-
-		script(src="#{assets}js/jquery.min.js")
-		//- animation
-		script(src="#{assets}js/myScript.js")
-		//- paralax
-		script(src="#{assets}js/parallax.min.js")
+			link(href="#{assets}css/myStyle.css", rel="stylesheet")
+			script(src="#{assets}js/jquery.min.js")
+			script(src="#{assets}js/bootstrap.min.js")
 
 	body.index
 		block menu
@@ -23,7 +20,7 @@ html(lang="en")
 				//- Brand and toggle get grouped for better mobile display
 				.container
 					.navbar-header
-						button.navbar-toggle(type="button" data-toggle="collapse" data-target="#navbar-collapse-1")
+						button.ghost.navbar-toggle(type="button" data-toggle="collapse" data-target="#navbar-collapse-1")
 							span.sr-only Toggle navigation
 							span.icon-bar 
 							span.icon-bar 
@@ -37,10 +34,16 @@ html(lang="en")
 							li
 								a(href="#{relativeLink}index.html") Home
 							li
-								a(href="#{etsyLinkStore}") Collection
-						ul.nav.navbar-nav.navbar-right
-							li
 								a(href="#{relativeLink}biography-of-calina-lefter.html") Blog
+
+						ul.nav.navbar-nav.navbar-right
+							li.dropdown
+								a.dropdown-toggle(href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false")
+									| Collection 
+									span.caret
+								ul.dropdown-menu
+									li: a(href="#") Printed
+									li: a(href="#") Printed
 							li
 								a(href="#{relativeLink}contact.php") Contact
 		block content
@@ -63,7 +66,7 @@ html(lang="en")
 						img.smallA(src="#{assets}img/smallA.jpg" alt="" title="")
 						img.smallB(src="#{assets}img/smallB.jpg" alt="" title="")
 					.cta.text-center
-						button.btn.btn-lg view more
+						button.ghost.btn.btn-lg view more
 				.section.section02
 					.copy
 						h2.text-center Only the best
@@ -73,7 +76,7 @@ html(lang="en")
 						img.backCover(src="#{assets}img/backCover.jpg" alt="" title="")
 						img.backCoverLogo(src="#{assets}img/backCover_logo.jpg" alt="" title="")
 					.cta.text-center
-						button.btn.btn-lg view more
+						button.ghost.btn.btn-lg view more
 				.section.section03
 					.parallax-window(data-parallax="scroll" data-image-src="#{assets}img/paralax01plic.jpg")
 						.container
@@ -83,7 +86,7 @@ html(lang="en")
 										h2 A beautifully designed
 										p A beautifully designed envelope, which opens like a smile, contains 10 wonderful pieces of affordable art works.
 										.cta.text-center
-										button.btn.btn-lg view more
+										button.ghost.btn.btn-lg view more
 				.clearfix
 				br
 				br
@@ -113,5 +116,9 @@ html(lang="en")
 				br
 				br
 				br
+			//- animation
+			script(src="#{assets}js/myScript.js")
+			//- paralax
+			script(src="#{assets}js/parallax.min.js")
 
 

@@ -1,0 +1,23 @@
+- var title 		= ""
+- var assets 		= "assets/"
+
+doctype html
+html(lang="en")
+	block head
+		head
+			title #{title}
+			meta(charset="utf-8")
+			meta(http-equiv="X-UA-Compatible" content="IE=edge")
+			meta(name="viewport" content="width=device-width, initial-scale=1")
+
+			link(href="#{assets}css/myStyle.css", rel="stylesheet")
+			script(src="#{assets}js/jquery.min.js")
+
+	body.index
+		section
+			img.01(src="assets/images/01.jpg")
+			img.02(src="assets/images/02.jpg")
+			img.03(src="assets/images/03.jpg")
+			img.04(src="assets/images/04.jpg")
+			img.05(src="assets/images/05.jpg")
+		p sample page

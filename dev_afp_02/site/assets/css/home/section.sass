@@ -1,43 +1,90 @@
-section
+.concept
 	height: 100vh
-	display: block
-	width: 100%
-
-section.scara
 	position: relative
-	background: pink
-	height: 800px
-	overflow: hidden
-	img
+	//background: pink
+	.vCenter
 		position: absolute
-		top: 0
-	.image01
-		z-index: 2
-		top: 40px
-		left: 70%
-		transform: translateX(-180px)
-		width: 360px
-	.image02
-		z-index: 1
-		top: 100px
-		left: 65%
-		transform: translateX(50px)
-		width: 300px
-	.image03
-		z-index: 3
-		top: 100px
-		left: 20%
-		transform: translateX(-150px)
-		width: 300px
-	.image04
-		z-index: 4
-		top: 40px
-		left: 35%
-		transform: translateX(-180px)
-		width: 360px
-	.image05
-		z-index: 5
+		width: 100%
+		height: 10em
+		//border: 1px solid red
+		top: 50%
+		transform: translateY(-5em)
+
+
+	h1, p
+
+		text-align: center
+
+
+.square.skrollable
+	padding: 0 15px
+	width: 100%
+	h1, p
+		width: 20%
+		text-align: right
+		margin-top: -40px
+
+	h1
+		font-size: 1.5em
+		margin-left: 5%
+	p
+		font-size: 1em
+		float: right
+		text-align: left
+		margin-right: 5%
+
+
+
+.skrollable
+	position: fixed
+	z-index: 100
+
+.skrollable.images
+	width: 100%
+	//background: pink
+
+.level3, .level2, .level1
+	z-index: 10
+	.frame
+		transform: translateX(-220px) translateY(-220px)
+		width: 440px
 		left: 50%
-		transform: translateX(-200px)
+
+.level2
+	z-index: 11
+
+.level3
+	z-index: 12
+
+.level0
+	z-index: 9
+	.image05
+		transform: translateX(-200px) translateY(-200px)
 		width: 400px
+		left: 50%
+
+.level-1
+	z-index: 4
+	img
+		width: 360px
+		transform: translateX(-180px) translateY(-180px)
+	.image03
+		left: 50%
+	.image04
+		top: 40px
+		transform: translateX(-180px) translateY(-180px)
+		width: 360px
+		left: 50%
+
+
+.level-2
+	z-index: 3
+	.image01
+		transform: translateX(-150px) translateY(-150px)
+		width: 260px
+		left: 50%
+	.image02
+		transform: translateX(-150px) translateY(-150px)
+		width: 260px
+		left: 50%
 

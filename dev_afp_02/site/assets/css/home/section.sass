@@ -33,6 +33,23 @@
 		text-align: left
 		margin-right: 5%
 
+.perspective.skrollable
+	padding: 0 15px
+	width: 100%
+	h1, p
+		width: 600px
+		text-align: center
+		transform: translateX(-300px)
+		background: red
+
+	h1
+		font-size: 1.5em
+		//margin-left: 5%
+	p
+		font-size: 1em
+		float: right
+		text-align: left
+		margin-right: 5%
 
 
 .skrollable
@@ -43,18 +60,21 @@
 	width: 100%
 	//background: pink
 
-.level3, .level2, .level1
+.level4, .level3, .level2, .level1 
 	z-index: 10
 	.frame
 		transform: translateX(-220px) translateY(-220px)
 		width: 440px
-		left: 50%
 
+.level4
+	z-index: 10
+.level3
+	z-index: 13
 .level2
+	z-index: 12
+.level1
 	z-index: 11
 
-.level3
-	z-index: 12
 
 .level0
 	z-index: 9

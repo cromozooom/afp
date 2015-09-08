@@ -1,20 +1,5 @@
-.concept
-	height: 100vh
-	position: relative
-	//background: pink
-	.vCenter
-		position: absolute
-		width: 100%
-		height: 10em
-		//border: 1px solid red
-		top: 50%
-		transform: translateY(-5em)
-
-
-	h1, p
-
-		text-align: center
-
+@import section/concept
+@import section/menu
 
 .square.skrollable
 	padding: 0 15px
@@ -40,7 +25,7 @@
 		width: 600px
 		text-align: center
 		transform: translateX(-300px)
-		background: red
+		//background: red
 
 	h1
 		font-size: 1.5em
@@ -58,7 +43,7 @@
 
 .skrollable.images
 	width: 100%
-	//background: pink
+	
 
 .level4, .level3, .level2, .level1 
 	z-index: 10
@@ -76,13 +61,31 @@
 	z-index: 11
 
 
+.level--2
+	z-index: 8
+	img.back
+
+		transform: translateX(-200px) translateY(-200px)
+		width: 400px
+		box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+
+
+.level--1
+	z-index: 7
+	img.back
+
+		transform: translateX(-200px) translateY(-200px)
+		width: 400px
+		box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.2);
+
+
 .level0
-	z-index: 9
+	z-index: 6
 	.image05
 		transform: translateX(-200px) translateY(-200px)
 		width: 400px
 .level-1
-	z-index: 4
+	z-index: 5
 	img
 		width: 360px
 		left: 50%
@@ -93,7 +96,7 @@
 
 
 .level-2
-	z-index: 3
+	z-index: 4
 	img
 		width: 260px
 		left: 50%
@@ -101,3 +104,12 @@
 		transform: translateX(-150px) translateY(-150px)
 	.image02
 		transform: translateX(-150px) translateY(-150px)
+.level-3
+	z-index: 3
+	img
+		width: 160px
+		left: 50%
+	.image01
+		transform: translateX(-80px) translateY(-80px)
+	.image02
+		transform: translateX(-80px) translateY(-80px)

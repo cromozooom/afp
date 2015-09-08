@@ -1,6 +1,9 @@
 - var title 		= ""
 - var assets 		= "assets/"
 
+//- var assetsDev 	= "assets/images/dev/"
+- var assetsDev 	= "assets/images/"
+
 doctype html
 html(lang="en")
 	block head
@@ -11,57 +14,49 @@ html(lang="en")
 			meta(name="viewport" content="width=device-width, initial-scale=1")
 			link(href="#{assets}css/normalize.css", rel="stylesheet")
 			link(href="#{assets}css/myStyle.css", rel="stylesheet")
+			link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css")
 
 	body.index
-		section.concept
-			.vCenter
-				h1 NEW CONCEPT
-				p
-					strong AMAZING FRAMEABLE POSTCARDS 
-					br
-					| is concept meant to resurrect our fascination and love for the postcards,
-					br
-					|in a new, modern and catchy way.
-
+		include include/sectionConcept
 		.skrollr-body
-			
+
 			//- text content 01
 			//- ///////////////////////////////////////////////////
 
 			.square.skrollable.head(
-				data-200="top: 40%; left: -20px; opacity: 0;"
+				data-400="top: 40%; left: -20px; opacity: 0;"
 				data-500="top: 40%; left: 0px; opacity: 1;"
-				data-1000="top: 40%; left: 0px; opacity: 1;"
-				data-1500="top: 40%; left: 20px; opacity: 0;"
+				data-800="top: 40%; left: 0px; opacity: 1;"
+				data-1000="top: 40%; left: 20px; opacity: 0;"
 				)
 				h1 THE MAGIC OF THE SQUARE
 			.square.skrollable.head(
-				data-200="top: 40%; right: -20px; opacity: 0;"
+				data-400="top: 40%; right: -20px; opacity: 0;"
 				data-500="top: 40%; right: 0px; opacity: 1;"
-				data-1000="top: 40%; right: 0px; opacity: 1;"
-				data-1500="top: 40%; right: 20px; opacity: 0;")
+				data-800="top: 40%; right: 0px; opacity: 1;"
+				data-1000="top: 40%; right: 20px; opacity: 0;")
 				p
-					strong AMAZING FRAMEABLE POSTCARDS 
+					strong AMAZING FRAMEABLE POSTCARDS
 					br
 					| Each postcard is square shaped.
 					br
 					| The square is a perfect balanced and a very stable shape. The square format lends itself to a simple approach. And by simplifying, the composition intensifies the subject.
-			
+
 			//- text content 02
 			//- ///////////////////////////////////////////////////
 
 			.square.skrollable.head(
 				data-1400="top: 40%; left: -20px; opacity: 0;"
 				data-1700="top: 40%; left: 0px; opacity: 1;"
-				data-2300="top: 40%; left: 0px; opacity: 1;"
-				data-2800="top: 40%; left: 20px; opacity: 0;"
+				data-4200="top: 40%; left: 0px; opacity: 1;"
+				data-4700="top: 40%; left: 20px; opacity: 0;"
 				)
 				h1 FRAMEABLE POSTCARDS
 			.square.skrollable.head(
 				data-1400="top: 40%; right: -20px; opacity: 0;"
 				data-1700="top: 40%; right: 0px; opacity: 1;"
-				data-2300="top: 40%; right: 0px; opacity: 1;"
-				data-2800="top: 40%; right: 20px; opacity: 0;"
+				data-4200="top: 40%; right: 0px; opacity: 1;"
+				data-4700="top: 40%; right: 20px; opacity: 0;"
 				)
 				p
 					| The square format provides the perfect balanced frame. We developed a simple, yet awesome frame, available in different colors that suit each postcard, giving you the possibility to easily frame your favorite. The framed postcards became exquisite objects to decorate your room or office.
@@ -69,31 +64,40 @@ html(lang="en")
 
 			//- text content 03
 			//- ///////////////////////////////////////////////////
-
 			.square.skrollable.head(
-				data-2700="top: 40%; left: -20px; opacity: 0;"
-				data-3100="top: 40%; left: 0px; opacity: 1;"
-				data-3600="top: 40%; left: 0px; opacity: 1;"
-				data-4100="top: 40%; left: 20px; opacity: 0;"
+				data-4700 = "top: 40%; left: -20px; opacity: 0;"
+				data-5100 = "top: 40%; left: 0px; opacity: 1;"
+				data-5600="top: 40%; left: 0px; opacity: 1;"
+				data-5800="top: 40%; left: -20px; opacity: 0;"
 				)
 				h1 THE STORY BEHIND
 			.square.skrollable.head(
-				data-2700="top: 40%; right: -20px; opacity: 0;"
-				data-3100="top: 40%; right: 0px; opacity: 1;"
-				data-3600="top: 40%; right: 0px; opacity: 1;"
-				data-4100="top: 40%; right: 20px; opacity: 0;"
+				data-4700="top: 40%; right: -20px; opacity: 0;"
+				data-5100="top: 40%; right: 0px; opacity: 1;"
+				data-5600="top: 40%; right: 0px; opacity: 1;"
+				data-5800="top: 40%; right: -20px; opacity: 0;"
 				)
 				p
 					| There is an interesting story behind every great image. Following the QR code on the back of the Amazing Frameable Postcards, you will trace the fascinating story behind the image printed on the postcards, gathered all on the blog.
+			//- imaginea backCard
+			.level--1.images.skrollable(
+				data-4700="left: 50%; top: 50%; opacity: 0;"
+				data-5000="left: 50%; top: 50%; opacity: 1;"
+				data-5600="left: 50%; top: 50%; opacity: 1;"
+				data-5800="left: 50%; top: 150%; opacity: 1;"
+				)
+				img.back(src="#{assetsDev}back.jpg")
+
+
 
 			//- text content 03
 			//- ///////////////////////////////////////////////////
 
 			.perspective.skrollable.head(
-				data-4100="top: 10%; left: 50%; opacity: 0;"
-				data-4600="top: 10%; left: 50%; opacity: 1;"
-				data-5100="top: 10%; left: 50%; opacity: 1;"
-				data-5400="top: 10%; left: 50%; opacity: 0;"
+				data-5500="top: 5%; left: 50%; opacity: 0;"
+				data-5900="top: 5%; left: 50%; opacity: 1;"
+				data-6300="top: 5%; left: 50%; opacity: 1;"
+				data-6700="top: 5%; left: 50%; opacity: 0;"
 				)
 				h1 THE COLLECTIONS
 			//-
@@ -106,83 +110,122 @@ html(lang="en")
 				p
 					|  The AMAZING FRAMEABLE POSTCARDS are gathered in collections of different interesting themes. Each collection contains 10 amazing postcards included in a nice, catchy envelope that opens like a smile.
 
+			//rama03 green
 			.level2.images.skrollable(
 				data-0="left: 50%; top: 130%; opacity: 1;"
 				data-500="left: 50%; top: 116%; opacity: 1;"
 				data-1000="left: 50%; top: 116%; opacity: 1;"
-				data-1400="left: 50%; top: 50%; opacity: 1;"
-				data-2000="left: 50%; top: 50%; opacity: 1;"
-				data-2500="left: 50%; top: 50%; opacity: 0;"
+				data-1300="left: 50%; top: 50%; opacity: 1;"
+				data-1600="left: 50%; top: 50%; opacity: 1;"
+				data-2000="left: 50%; top: 50%; opacity: 0;"
 				)
 				img.frame(
-					src="assets/images/rama_01.png")
+					src="#{assetsDev}rama_01.png")
 
+			// rama02 brawn
 			.level1.images.skrollable(
 				data-2000="left: 50%; top: 50%; opacity: 0;"
-				data-2500="left: 50%; top: 50%; opacity: 1;"
-				data-3000="left: 50%; top: 50%; opacity: 1;"
-				data-4000="left: 50%; top: 50%; opacity: 0;"
+				data-2200="left: 50%; top: 50%; opacity: 1;"
+				data-2400="left: 50%; top: 50%; opacity: 1;"
+				data-2800="left: 50%; top: 50%; opacity: 0;"
 				)
 				img.frame(
-					src="assets/images/rama_02.png")
+					src="#{assetsDev}rama_02.png")
 
+			// rama01 yello
 			.level3.images.skrollable(
-				data-3500="left: 50%; top: 50%; opacity: 0;"
-				data-4000="left: 50%; top: 50%; opacity: 1;"
-				data-4500="left: 50%; top: 50%; opacity: 1;"
-				data-4700="left: 50%; top: 125%; opacity: 1;"
+				data-2800="left: 50%; top: 50%; opacity: 0;"
+				data-3200="left: 50%; top: 50%; opacity: 1;"
+				data-3600="left: 50%; top: 50%; opacity: 1;"
+				data-4000="left: 50%; top: -50%; opacity: 1;"
 				)
 				img.frame(
-					src="assets/images/rama_03.png")
+					src="#{assetsDev}rama_03.png")
 
+			// rama00 gri
 			.level4.images.skrollable(
-				data-1500="left: 50%; top: 50%; opacity: 0;"
-				data-1501="left: 50%; top: 50%; opacity: 1;"
-				data-4500="left: 50%; top: 50%; opacity: 1;"
-				data-4700="left: 50%; top: 125%; opacity: 1;"
+				data-1300="left: 50%; top: 50%; opacity: 0;"
+				data-1301="left: 50%; top: 50%; opacity: 1;"
+				data-3600="left: 50%; top: 50%; opacity: 1;"
+				data-4000="left: 50%; top: -50%; opacity: 1;"
 				)
 				img.frame(
-					src="assets/images/rama.png")
-			
-			.level0.images.skrollable(
-				data-0="left: 40%; top: 50%; opacity: 0"
+					src="#{assetsDev}rama.png")
+
+			//- imaginea backPack
+			.level--2.images.skrollable(
+				data-5600="left: 50%; top: 45%; opacity: 0;"
+				data-6000="left: 50%; top: 50%; opacity: 1;"
+				data-6200="left: 50%; top: 50%; opacity: 1;"
+				data-8200="left: 50%; top: 60%; opacity: 0;"
+				)
+				img.back(src="#{assetsDev}plicBack.jpg")
+
+			//- imaginea centrala
+			.level0.images.skrollable.card(
+				data-0="left: 50%; top: 50%; opacity: 0"
 				data-500="left: 50%; top: 50%; opacity: 1"
-				data-1000="left: 50%; top: 50%; opacity: 1"
-				data-2000="left: 50%; top: 50%; opacity: 1"
-				data-3000="left: 50%; top: 50%; opacity: 1"
+				data-5600="left: 50%; top: 50%; opacity: 1"
+				data-5601="left: 50%; top: 50%; opacity: 0"
+				data-8700="left: 50%; top: 50%; opacity: 0"
+				data-9000="left: 50%; top: 50%; opacity: 1"
+				data-10000="left: 50%; top: 50%; opacity: 1"
 				)
 				img.image05(
-					src="assets/images/05.jpg")
+					src="#{assetsDev}05.jpg")
 
-			.level-1.images.skrollable(
-				data-5000="opacity: 0"
-				data-5500="left: 50%; top: 51%; opacity: 1"
-				data-6000="left: 45%; top: 51%; opacity: 1"
+			//imaginea 1 left
+			.level-1.images.skrollable.card(
+				data-7500="opacity: 0"
+				data-8500="left: 50%; top: 51%; opacity: 1"
+				data-9000="left: 35%; top: 51%; opacity: 1"
 				)
 				img.image04(
-					src="assets/images/04.jpg")
-			.level-1.images.skrollable(
-				data-5000="opacity: 0"
-				data-5500="left: 50%; top: 51%; opacity: 1"
-				data-6000="left: 55%; top: 51%; opacity: 1"
+					src="#{assetsDev}04.jpg")
+
+			//imaginea 1 right
+			.level-1.images.skrollable.card(
+				data-7500="opacity: 0"
+				data-8000="left: 50%; top: 51%; opacity: 1"
+				data-9000="left: 65%; top: 51%; opacity: 1"
 				)
 				img.image03(
-					src="assets/images/03.jpg")
+					src="#{assetsDev}03.jpg")
 
-			.level-2.images.skrollable(
+			//imaginea 2 right
+			.level-2.images.skrollable.card(
 				data-5400="left: 50%; top: 50%; opacity: 0"
 				data-5500="left: 50%; top: 50%; opacity: 1"
-				data-6000="left: 66%; top: 55%; opacity: 1"
+				data-6000="left: 80%; top: 55%; opacity: 1"
 				)
 				img.image01(
-					src="assets/images/01.jpg")
-			.level-2.images.skrollable(
+					src="#{assetsDev}01.jpg")
+
+			//imaginea 2left
+			.level-2.images.skrollable.card(
 				data-5400="left: 50%; top: 50%; opacity: 0"
 				data-5500="left: 50%; top: 50%; opacity: 1"
-				data-6000="left: 38%; top: 55%; opacity: 1"
+				data-6000="left: 20%; top: 55%; opacity: 1"
 				)
 				img.image02(
-					src="assets/images/02.jpg")
+					src="#{assetsDev}02.jpg")
+			//imaginea 2 right
+			.level-3.images.skrollable.card(
+				data-5400="left: 50%; top: 50%; opacity: 0"
+				data-5500="left: 50%; top: 50%; opacity: 1"
+				data-6000="left: 90%; top: 55%; opacity: 1"
+				)
+				img.image01(
+					src="#{assetsDev}01.jpg")
+
+			//imaginea 2left
+			.level-3.images.skrollable.card(
+				data-5400="left: 50%; top: 50%; opacity: 0"
+				data-5500="left: 50%; top: 50%; opacity: 1"
+				data-6000="left: 10%; top: 55%; opacity: 1"
+				)
+				img.image02(
+					src="#{assetsDev}02.jpg")
 
 
 
@@ -192,28 +235,28 @@ html(lang="en")
 				data-3000="left: 80%; top: 50%; opacity: 1"
 				)
 				img.image03(
-					src="assets/images/03.jpg")
+					src="#{assetsDev}03.jpg")
 
 			//
 				section.scara
 				img.image01(
 					data-bottom-top="left: 50%"
 					data-center="left: 20%"
-					src="assets/images/01.jpg")
+					src="#{assetsDev}01.jpg")
 				img.image02(
 					data-bottom-top="left: 50%"
 					data-center="left: 80%"
-					src="assets/images/02.jpg")
+					src="#{assetsDev}02.jpg")
 				img.image03(
 					data-bottom-top="left: 50%"
 					data-center="left: 65%"
-					src="assets/images/03.jpg")
+					src="#{assetsDev}03.jpg")
 				img.image04(
 					data-bottom-top="left: 50%"
 					data-center="left: 35%"
-					src="assets/images/04.jpg")
+					src="#{assetsDev}04.jpg")
 				img.image05(
-					src="assets/images/05.jpg")
+					src="#{assetsDev}05.jpg")
 			section.single
 		script(src="#{assets}js/jquery.min.js")
 		script(src="assets/js/skroll.min.js")

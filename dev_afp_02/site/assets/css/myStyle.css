@@ -8266,8 +8266,8 @@ ul#menu img {
 }
 
 .level0 .image05 {
-  transform: translateX(-200px) translateY(-200px);
   width: 400px;
+  transform: translateX(-200px) translateY(-200px);
 }
 
 .level-1 {
